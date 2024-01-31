@@ -1,40 +1,39 @@
-<script>
-    function AccountNavigation(location) {
+function MainNavigation(location) {
     const links = [
       {
-        name: "Notifications",
-        url: "#",
-      },
-      {
-        name: "Profile",
+        name: "Account",
         url: "/Kanbas/Account/Profile/screen.html",
       },
       {
-        name: "Files",
+        name: "Dashboard",
         url: "#",
       },
       {
-        name: "Settings",
+        name: "Courses",
+        url: "/Kanbas/Courses/Home/screen.html",
+      },
+      {
+        name: "Calendar",
         url: "#",
       },
       {
-        name: "ePortfolios",
+        name: "Inbox",
         url: "#",
       },
       {
-        name: "Shared Content",
+        name: "History",
         url: "#",
       },
       {
-        name: "The Hub",
+        name: "Studio",
         url: "#",
       },
       {
-        name: "Qwickly Course Tools",
+        name: "Commons",
         url: "#",
       },
       {
-        name: "Global Announcements",
+        name: "Help",
         url: "#",
       },
     ];
@@ -51,5 +50,3 @@
       </ul>
     `);
   }
-  AccountNavigation();
-</script>

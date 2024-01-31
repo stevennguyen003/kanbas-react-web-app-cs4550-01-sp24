@@ -1,5 +1,4 @@
-<script>
-    function AccountNavigation(location) {
+function AccountNavigation(location) {
     const links = [
       {
         name: "Notifications",
@@ -51,5 +50,3 @@
       </ul>
     `);
   }
-  AccountNavigation();
-</script>
