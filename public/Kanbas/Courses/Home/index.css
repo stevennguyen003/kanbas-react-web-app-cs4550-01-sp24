@@ -1,0 +1,33 @@
+.wd-courses-header {
+    margin: 5px;
+}
+
+.wd-courses-header button {
+    border: 1px;
+    border: solid;
+    border-color: rgb(227, 227, 227);
+    height: 25px;
+    font-size: 15px;
+}
+
+.wd-courses-sidebar button {
+    border: 1px;
+    border: solid;
+    border-color: rgb(227, 227, 227);
+    height: 25px;
+    font-size: 15px;
+}
+
+.wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.wd-flex-col-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.wd-flex-grow-1 {
+    flex-grow: 1;
+}

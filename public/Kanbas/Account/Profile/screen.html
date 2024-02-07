@@ -3,15 +3,36 @@
 <head>
     <script src="/Kanbas/Account/Navigation/index.js"></script>
     <script src="/Kanbas/Navigation/index.js"></script>
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
 <body>
     <table width="100%">
         <tr valign="top">
             <td>
-                <script>
-                    MainNavigation("Account");
-                </script>
+                <ul class="wd-kanbas-navigation">
+                    <li><br><a href="http://northeastern.edu">
+                            <i class="fab fa-neos"></i></a></li>
+                    <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html"><i
+                                class="fa fa-user"></i>
+                            Account</a></li>
+                    <li>
+                        <a href="/Kanbas/Dashboard/screen.html">
+                            <i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="/Kanbas/Courses/Home/screen.html">
+                            <i class="fa fa-book"></i> Courses</a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-calendar"></i> Calendar</a></li>
+                    <li><a href="#"><i class="fa fa-envelope"></i> Inbox</a></li>
+                    <li><a href="#"><i class="fa fa-clock"></i> History</a></li>
+                    <li><a href="#"><i class="fa fa-tv"></i> Studio</a></li>
+                    <li><a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Commons</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i><br>Help</a></li>
+                </ul>
             </td>
             <td>
                 <script>
@@ -25,7 +46,7 @@
                 <br>
                 <a href="/Kanbas/Account/Profile/Edit/screen.html">
                     <button style="float: right">Edit Profile</button>
-                  </a>
+                </a>
                 <h1>Steven Nguyen</h1>
                 <h2>Contact</h2>
                 No registered services, you can add some on the settings page.

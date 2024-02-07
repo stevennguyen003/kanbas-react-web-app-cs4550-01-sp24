@@ -1,36 +1,27 @@
-<script>
-    function CourseNavigation() {
-        const links = [
-            {
-              name: "Account",
-              url: "/Kanbas/Account/Navigation/index.html",
-            },
-            {
-              name: "Dashboard",
-              url: "/Kanbas/Dashboard/screen.html",
-            },
-            {
-              name: "Courses",
-              url: "/Kanbas/Courses/Home/screen.html",
-            },
-            {
-              name: "Calendar",
-              url: "/Kanbas/Calendar/index.html",
-            },
-            {
-              name: "Inbox",
-              url: "/Kanbas/Inbox/index.html",
-            },
-          ];
-          document.write(`
-            <ul>
-              ${links
-                .map((link) => {
-                  return `<li><a href="${link.url}">${link.name}</a></li>`;
-                })
-                .join("")}
-          </ul>     
-        `);
-    }
-    CourseNavigation();
-</script>
+<html>
+
+<head>
+  <link rel="stylesheet" href="/Kanbas/styles.css" />
+  <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+</head>
+
+<body>
+  <ul class="wd-navigation">
+    <li>
+      <a href="/Kanbas/Courses/Home/screen.html">Home</a>
+    </li>
+    <li>
+      <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
+    </li>
+    <li><a href="http://piazza.com">Piazza</a></li>
+    <li><a href="#">Zoom</a></li>
+    <li>
+      <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+    </li>
+    <li><a href="#">Quizzes</a></li>
+    <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+    <li><a href="#">People</a></li>
+  </ul>
+</body>
+
+</html>

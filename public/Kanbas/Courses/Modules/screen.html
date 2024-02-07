@@ -1,0 +1,142 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+</head>
+
+<body>
+    <table width="100%">
+        <tr valign="top" class="wd-flex-row-container">
+            <td class="d-none d-md-block">
+                <ul class="wd-kanbas-navigation">
+                    <li><br><a href="http://northeastern.edu">
+                            <i class="fab fa-neos"></i></a></li>
+                    <li><a href="/Kanbas/Account/Profile/screen.html"><i class="fa fa-user account-icon"></i>
+                            Account</a></li>
+                    <li>
+                        <a href="/Kanbas/Dashboard/screen.html">
+                            <i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                    <li class="wd-active">
+                        <a href="/Kanbas/Courses/Home/screen.html">
+                            <i class="fa fa-book"></i> Courses</a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-calendar"></i> Calendar</a></li>
+                    <li><a href="#"><i class="fa fa-envelope"></i> Inbox</a></li>
+                    <li><a href="#"><i class="fa fa-clock"></i> History</a></li>
+                    <li><a href="#"><i class="fa fa-tv"></i> Studio</a></li>
+                    <li><a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Commons</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i><br>Help</a></li>
+                </ul>
+            </td>
+            <td class="d-none d-md-block">
+                <ul class="wd-navigation">
+                    <li>
+                        <a href="/Kanbas/Courses/Home/screen.html">Home</a>
+                    </li>
+                    <li class="wd-active">
+                        <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
+                    </li>
+                    <li><a href="http://piazza.com">Piazza</a></li>
+                    <li><a href="#">Zoom</a></li>
+                    <li>
+                        <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+                    </li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                </ul>
+            </td>
+            <td class="wd-flex-grow-1">
+                <div class="d-block d-md-none">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                        <div class="row container-fluid" style="margin:0px">
+                            <div class="col">
+                                <a href="/Kanbas/Navigation/index.html">
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a class="navbar-brand" href="#">CS4550 > Modules</a>
+                            </div>
+                            <div class="col">
+                                <a href="/Kanbas/Courses/Navigation/index.html">
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        style="float: right" data-bs-target="#navbarSupportedContent"
+                                        aria-controls="navbarSupportedContent" aria-expanded="false"
+                                        aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="wd-modules-header">
+                    <button>Collapse All</button>
+                    <button>View Progress</button>
+                    <button>Publish All</button>
+                    <button>Module</button>
+                </div>
+                <hr>
+                <ul class="list-group wd-modules">
+                    <li class="list-group-item">
+                        <div>
+                            <i class="fa fa-ellipsis-v"></i> Week 1
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-plus ms-2"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <i class="fa fa-ellipsis-v"></i> Learning Objectives
+                                <span class="float-end">
+                                    <i class="fa fa-check-circle text-success"></i>
+                                    <i class="fa fa-ellipsis-v ms-2"></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <div>
+                            <i class="fa fa-ellipsis-v"></i> Week 2
+                            <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-plus ms-2"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </td>
+            <td class="d-none d-lg-block">
+                <div class="wd-modules-sidebar">
+                    Course Status <br>
+                    <div class="wd-publish-set">
+                        <button><i class="fa fa-ban"></i> Unpublish</button>
+                        <button><i class="fa fa-check"></i> Publish</button> <br> <br>
+                    </div>
+                    <div class="wd-button-set">
+                        <button><i class="fa fa-file-import"></i> Import Existing Content</button> <br>
+                        <button><i class="fa fa-arrow-down"></i> Import from Commons</button> <br>
+                        <button><i class="fa fa-house-user"></i> Choose Home Page</button> <br>
+                        <button><i class="fa fa-chart-line"></i> View Course Stream</button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

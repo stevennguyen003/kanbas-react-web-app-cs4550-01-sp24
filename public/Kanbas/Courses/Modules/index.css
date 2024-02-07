@@ -1,0 +1,71 @@
+.wd-modules,
+.wd-modules * {
+    border-radius: 0%;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.wd-modules {
+    margin: 5px;
+}
+
+.wd-modules>li {
+    background-color: lightgray;
+    border: 1px solid gray !important;
+    border-left: none !important;
+}
+
+.wd-modules>li>div {
+    padding: 6px;
+    border-left: 1px solid gray !important;
+}
+
+.wd-modules>li>ul>li {
+    padding: 5px;
+    border-top: 1px solid gray !important;
+    border-left: 2px solid green;
+}
+
+.wd-modules>li {
+    margin-bottom: 20px;
+}
+
+.wd-modules-header {
+    display: flex;
+    padding-top: 10px;
+    justify-content: right;
+}
+
+.wd-modules-header button {
+    border: 1px;
+    border: solid;
+    border-color: rgb(227, 227, 227);
+    height: 30px;
+}
+
+.wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.wd-flex-grow-1 {
+    flex-grow: 1;
+}
+
+.wd-modules-sidebar {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.wd-modules-sidebar button {
+    border: 1px;
+    border: solid;
+    border-color: rgb(227, 227, 227);
+    height: 30px;
+}
+
+.wd-button-set button {
+    text-align: left;
+    width: 100%
+}
