@@ -1,0 +1,26 @@
+.wd-course-home-body {
+    width: 100%;
+}
+
+.wd-course-module-list {
+    width: 100%;
+}
+
+.wd-course-status-bar {
+    flex-grow: 1;
+    width: 30%;
+}
+
+.wd-course-status-bar button {
+    margin-bottom: 5px;
+    background-color: rgba(244, 244, 244, 0.952);
+    border-color: rgb(209, 209, 209);
+    border-style: solid;
+    height: 45px;
+    width: 85%;
+    vertical-align: top;
+    padding-left: 10px;
+    border-radius: 4px;
+    border-width: 1px;
+    text-align: left;
+}

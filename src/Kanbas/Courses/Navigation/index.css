@@ -1,0 +1,50 @@
+.wd-course-header {
+    margin: 20px;
+}
+
+.wd-course-header h1 {
+    margin: 0px;
+    color: black;
+}
+
+.wd-course-header .wd-course-header-text {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.wd-navigation {
+    background-color: white;
+    list-style: none;
+    padding: 0px;
+    width: 125px;
+    font-size: 20px;
+    height: 100vh;
+    margin: 0px;
+    margin-left: 20px;
+}
+
+.wd-navigation li {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.wd-navigation li.wd-active {
+    border-left: 2px solid black;
+}
+
+.wd-navigation li.wd-active a {
+    color: black;
+}
+
+.wd-navigation a {
+    color: red;
+    text-decoration: none;
+}
+
+.wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
