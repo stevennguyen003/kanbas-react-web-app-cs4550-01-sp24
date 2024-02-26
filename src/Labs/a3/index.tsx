@@ -15,7 +15,7 @@ function Assignment3() {
         vel nihil repellat nemo explicabo excepturi consectetur. Modi omnis minus sequi maiores, provident voluptates.
       </Highlight>
       <Add a={3} b={4} />
-      <TodoList/>
+      <TodoList />
       <ConditionalOutput />
       <Styles />
       <Classes />
