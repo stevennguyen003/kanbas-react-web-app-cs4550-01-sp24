@@ -5,6 +5,8 @@
     padding: 0px;
     margin: 0px;
     font-size: 20px;
+    position: sticky;
+    top: 0;
 }
 
 .wd-kanbas-navigation li {
@@ -26,7 +28,7 @@
     text-align: center;
 }
 
-.wd-kanbas-navigation li.wd-active .wd-nav-label{
+.wd-kanbas-navigation li.wd-active .wd-nav-label {
     color: black;
 }
 

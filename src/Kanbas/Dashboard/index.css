@@ -1,0 +1,14 @@
+.card-button-set button {
+    margin-left: 5px;
+    background-color: rgb(227, 226, 226);
+}
+
+.course-modify-form {
+    margin: 10px;
+    margin-left: 0px;
+    width: 350px;
+}
+
+.course-modify-form button {
+    margin: 5px;
+}

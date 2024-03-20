@@ -1,4 +1,11 @@
-import courses from "./courses.json";
+import courseList from "./courses.json";
 import modules from "./modules.json";
 import assignments from "./assignments.json";
-export {  courses, modules, assignments, };
+const db = { courses: courseList };
+interface Lesson {
+    _id: string;
+    name: string;
+    description: string;
+    module: string;
+}
+export { db, modules, assignments, type Lesson };

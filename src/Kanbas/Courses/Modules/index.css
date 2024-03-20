@@ -12,6 +12,25 @@
     margin-right: 35px;
 }
 
+.module-modify-form {
+    margin: 10px;
+    margin-left: 35px;
+    width: 350px;
+}
+
+.module-modify-form button {
+    margin: 5px;
+}
+
+.module-modify-form input {
+    width: 400px;
+    margin-bottom: 5px;
+}
+
+.module-modify-form textarea {
+    width: 400px;
+}
+
 .wd-modules-heading-buttons {
     margin: 35px;
     margin-top: 10px;
@@ -44,6 +63,17 @@
 .list-group-item-heading {
     display: flex;
     flex-direction: row;
+}
+
+.list-group-item-heading button {
+    margin-right: 5px;
+    background-color: rgba(244, 244, 244, 0.952);
+    border-color: rgb(209, 209, 209);
+    border-style: solid;
+    height: 30px;
+    vertical-align: top;
+    border-radius: 4px;
+    border-width: 1px;
 }
 
 .float-end {

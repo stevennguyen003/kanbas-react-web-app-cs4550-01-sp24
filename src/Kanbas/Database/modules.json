@@ -45,7 +45,7 @@
         },
         {
           "_id": "L203",
-          "name": "Combustion Instability",
+          "name": "Combustion Instability", 
           "description": "Understanding combustion instability and mitigation.",
           "module": "M102"
         }
