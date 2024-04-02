@@ -1,6 +1,6 @@
 import axios from "axios";
-const COURSES_API = "http://localhost:4000/api/courses";
-const MODULES_API = "http://localhost:4000/api/modules";
+const COURSES_API = "https://kanbas-node-server-app-etz6.onrender.com/api/courses";
+const MODULES_API = "https://kanbas-node-server-app-etz6.onrender.com/api/modules";
 export const deleteModule = async (moduleId: any) => {
     const response = await axios
         .delete(`${MODULES_API}/${moduleId}`);
@@ -20,6 +20,7 @@ export const createModule = async (courseId: any, module: any) => {
     );
     return response.data;
 };
+
 export const findModulesForCourse = async (courseId: any) => {
     const response = await axios
         .get(`${COURSES_API}/${courseId}/modules`);
