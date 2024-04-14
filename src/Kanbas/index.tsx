@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Account from "./Account";
+import Profile from "../Users/Profile";
 import KanbasNavigation from "./Navigation";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
@@ -57,7 +58,7 @@ function Kanbas() {
         <div style={{ flexGrow: 1 }}>
           <Routes>
             <Route path="/" element={<Navigate to="Dashboard" />} />
-            <Route path="Account/*" element={<Account />} />
+            <Route path="Account/*" element={<Profile />} />
             <Route path="Dashboard" element={
               <Dashboard
                 courses={courses}
