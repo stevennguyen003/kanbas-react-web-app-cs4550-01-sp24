@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BsTrash3Fill, BsPlusCircleFill } from "react-icons/bs";
+import { BsFillCheckCircleFill, BsPencil, BsTrash3Fill, BsPlusCircleFill } from "react-icons/bs";
 import * as client from "./client";
 import { User } from "./client";
 export default function UserTable() {
@@ -8,6 +8,13 @@ export default function UserTable() {
         _id: "", username: "", password: "", firstName: "",
         lastName: "", role: "USER"
     });
+    const [role, setRole] = useState("USER");
+    const fetchUsersByRole = async (role: string) => {
+        const users = await client.findUsersByRole(role);
+        setRole(role);
+        setUsers(users);
+    };
+
     const createUser = async () => {
         try {
             const newUser = await client.createUser(user);
@@ -24,6 +31,23 @@ export default function UserTable() {
             console.log(err);
         }
     };
+    const selectUser = async (user: User) => {
+        try {
+            const u = await client.findUserById(user._id);
+            setUser(u);
+        } catch (err) {
+            console.log(err);
+        }
+    };
+    const updateUser = async () => {
+        try {
+            const status = await client.updateUser(user);
+            setUsers(users.map((u) =>
+                (u._id === user._id ? user : u)));
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
     const fetchUsers = async () => {
         const users = await client.findAllUsers();
@@ -32,6 +56,16 @@ export default function UserTable() {
     useEffect(() => { fetchUsers(); }, []);
     return (
         <div>
+            <select
+                onChange={(e) => fetchUsersByRole(e.target.value)}
+                value={role || "USER"}
+                className="form-control w-25 float-end"
+            >
+                <option value="USER">User</option>
+                <option value="ADMIN">Admin</option>
+                <option value="FACULTY">Faculty</option>
+                <option value="STUDENT">Student</option>
+            </select>
             <h1>User Table</h1>
             <table className="table">
                 <thead>
@@ -65,8 +99,15 @@ export default function UserTable() {
                                 <option value="STUDENT">Student</option>
                             </select>
                         </td>
-                        <td>
-                            <BsPlusCircleFill onClick={createUser} />
+                        <td className="text-nowrap">
+                            <BsFillCheckCircleFill
+                                onClick={updateUser}
+                                className="me-2 text-success fs-1 text"
+                            />
+                            <BsPlusCircleFill
+                                onClick={createUser}
+                                className="text-success fs-1 text"
+                            />
                         </td>
                         <th>&nbsp;</th>
                     </tr>
@@ -77,9 +118,12 @@ export default function UserTable() {
                             <td>{user.username}</td>
                             <td>{user.firstName}</td>
                             <td>{user.lastName}</td>
-                            <td>
-                                <button onClick={() => deleteUser(user)}>
-                                    <BsTrash3Fill />
+                            <td className="text-nowrap">
+                                <button className="btn btn-danger me-2">
+                                    <BsTrash3Fill onClick={() => deleteUser(user)} />
+                                </button>
+                                <button className="btn btn-warning me-2">
+                                    <BsPencil onClick={() => selectUser(user)} />
                                 </button>
                             </td>
                         </tr>))}

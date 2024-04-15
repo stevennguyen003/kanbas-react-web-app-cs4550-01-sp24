@@ -18,9 +18,11 @@ export default function Signup() {
       <h1>Signup</h1>
       {error && <div>{error}</div>}
       <input value={user.username} onChange={(e) => setUser({
-          ...user, username: e.target.value })} />
+        ...user, username: e.target.value
+      })} />
       <input value={user.password} onChange={(e) => setUser({
-          ...user, password: e.target.value })} />
+        ...user, password: e.target.value
+      })} />
       <button onClick={signup}> Signup </button>
     </div>
   );

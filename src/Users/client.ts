@@ -1,6 +1,6 @@
 import axios from "axios";
 export const BASE_API = process.env.REACT_APP_BASE_API_URL;
-export const USERS_API = `${BASE_API}/api/users`;
+export const USERS_API = process.env.REACT_APP_API_URL;
 export interface User {
     _id: string; username: string; password: string; role: string;
     firstName: string, lastName: string
@@ -28,6 +28,15 @@ export const createUser = async (user: any) => {
 export const deleteUser = async (user: any) => {
     const response = await axios.delete(
         `${USERS_API}/${user._id}`);
+    return response.data;
+};
+export const findUserById = async (id: string) => {
+    const response = await axios.get(`${USERS_API}/${id}`);
+    return response.data;
+};
+export const findUsersByRole = async (role: string) => {
+    const response = await
+        axios.get(`${USERS_API}?role=${role}`);
     return response.data;
 };
 export const signup = async (user: any) => {
