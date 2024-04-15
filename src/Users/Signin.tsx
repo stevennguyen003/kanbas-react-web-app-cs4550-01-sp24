@@ -23,8 +23,8 @@ export default function Signin() {
           setCredentials({ ...credentials, username: e.target.value })} /> <br />
         <input value={credentials.password} onChange={(e) =>
           setCredentials({ ...credentials, password: e.target.value })} /> <br />
-        <button onClick={signin}> Signin </button>
-        <button onClick={signup}> Signup </button>
+        <button className="btn btn-primary" onClick={signin}> Signin </button> <br/>
+        <button className="btn btn-primary" onClick={signup}> Signup </button>
       </div>
     </>
   );

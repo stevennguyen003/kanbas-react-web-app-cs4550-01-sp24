@@ -23,7 +23,7 @@ export default function Signup() {
       <input value={user.password} onChange={(e) => setUser({
         ...user, password: e.target.value
       })} /> <br />
-      <button onClick={signup}> Signup </button>
+      <button className="btn btn-primary" onClick={signup}> Signup </button> <br />
     </div>
   );
 }
