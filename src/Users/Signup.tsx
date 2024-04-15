@@ -18,11 +18,11 @@ export default function Signup() {
     <div className="account-container">
       <h1>Signup</h1>
       {error && <div>{error}</div>}
-      <h3>Username</h3>
+      <p>Username</p>
       <input value={user.username} onChange={(e) => setUser({
         ...user, username: e.target.value
       })} /> <br />
-      <h3>Password</h3>
+      <p>Password</p>
       <input value={user.password} onChange={(e) => setUser({
         ...user, password: e.target.value
       })} /> <br />

@@ -18,12 +18,12 @@ export default function Signin() {
   };
   return (
     <>
-      <div className="account-signin-container">
+      <div className="account-container">
         <h1>Signin</h1>
-        <h3>Username</h3>
+        <p>Username</p>
         <input value={credentials.username} onChange={(e) =>
           setCredentials({ ...credentials, username: e.target.value })} /> <br />
-        <h3>Password</h3>
+        <p>Password</p>
         <input value={credentials.password} onChange={(e) =>
           setCredentials({ ...credentials, password: e.target.value })} /> <br />
         <button className="btn btn-primary" onClick={signin}> Signin </button> <br />
