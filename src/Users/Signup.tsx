@@ -19,10 +19,10 @@ export default function Signup() {
       {error && <div>{error}</div>}
       <input value={user.username} onChange={(e) => setUser({
         ...user, username: e.target.value
-      })} />
+      })} /> <br />
       <input value={user.password} onChange={(e) => setUser({
         ...user, password: e.target.value
-      })} />
+      })} /> <br />
       <button onClick={signup}> Signup </button>
     </div>
   );
