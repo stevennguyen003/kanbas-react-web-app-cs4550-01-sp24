@@ -1,6 +1,6 @@
 import axios from "axios";
 axios.defaults.withCredentials = true;
-export const BASE_API = process.env.REACT_APP_BASE_API_URL;
+export const BASE_API = "https://kanbas-node-server-app-etz6.onrender.com";
 export const USERS_API = `${BASE_API}/api/users`;
 const api = axios.create({
     withCredentials: true
