@@ -1,22 +1,20 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Account from "./Account";
-import Profile from "../Users/Profile";
 import KanbasNavigation from "./Navigation";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
-import { db } from "./Database";
 import store from "./store";
 import { Provider } from "react-redux";
-const API_BASE = process.env.REACT_APP_API_BASE;
 function Kanbas() {
+  const API_BASE = process.env.REACT_APP_BASE_API_URL;
   const [courses, setCourses] = useState<any[]>([]);
   const COURSES_API = `${API_BASE}/api/courses`;
   const findAllCourses = async () => {
     const response = await axios.get(COURSES_API);
     setCourses(response.data);
-  };
+  }
   useEffect(() => {
     findAllCourses();
   }, []);
@@ -68,7 +66,7 @@ function Kanbas() {
                 deleteCourse={deleteCourse}
                 updateCourse={updateCourse} />
             } />
-            <Route path="Courses/:courseId/*" element={<Courses/>} />
+            <Route path="Courses/:courseId/*" element={<Courses />} />
           </Routes>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import axios from "axios";
+axios.defaults.withCredentials = true;
 export const BASE_API = process.env.REACT_APP_BASE_API_URL;
-export const USERS_API = process.env.REACT_APP_API_URL;
+export const USERS_API = `${BASE_API}/api/users`;
 const api = axios.create({
     withCredentials: true
 });
@@ -13,7 +14,7 @@ export const signin = async (credentials: User) => {
         .then(response => response.data);
 };
 export const profile = async () => {
-    const response = await axios.post(`${USERS_API}/profile`);
+    const response = await api.post(`${USERS_API}/profile`);
     return response.data;
 };
 export const updateUser = async (user: any) => {
@@ -43,11 +44,11 @@ export const findUsersByRole = async (role: string) => {
     return response.data;
 };
 export const signup = async (user: any) => {
-    api.post(`${USERS_API}/signup`, user)
-        .then(response => response.data);
+    const response = await api.post(`${USERS_API}/signup`, user);
+    return response.data;
 };
 export const signout = async () => {
-    const response = await axios.post(`${USERS_API}/signout`);
+    const response = await api.post(`${USERS_API}/signout`);
     return response.data;
 };
 
