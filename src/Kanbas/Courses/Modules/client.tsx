@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_BASE = process.env.REACT_APP_API_BASE;
+const API_BASE = process.env.REACT_APP_BASE_API_URL;
 const COURSES_API = `${API_BASE}/api/courses`;
 const MODULES_API = `${API_BASE}/api/modules`;
 export const deleteModule = async (moduleId: any) => {
@@ -23,7 +23,6 @@ export const createModule = async (courseId: any, module: any) => {
 };
 
 export const findModulesForCourse = async (courseId: any) => {
-    const response = await axios
-        .get(`${COURSES_API}/${courseId}/modules`);
+    const response = await axios.get(`${COURSES_API}/${courseId}/modules`);
     return response.data;
 };

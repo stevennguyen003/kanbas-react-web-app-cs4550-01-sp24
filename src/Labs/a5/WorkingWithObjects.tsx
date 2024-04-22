@@ -6,7 +6,8 @@ function WorkingWithObjects() {
     description: "Create a NodeJS server with ExpressJS",
     due: "2021-10-10", completed: false, score: 0,
   });
-  const ASSIGNMENT_URL = "http://localhost:4000/a5/assignment"
+  const ASSIGNMENT_URL = "http://localhost:4000/a5/assignment" ||`${process.env.REACT_APP_BASE_API_URL}/a5/assignment`;
+  const MODULE_URL = "http://localhost:4000/a5/modules" ||`${process.env.REACT_APP_BASE_API_URL}/a5/modules`;
   const fetchAssignment = async () => {
     const response = await axios.get(`${ASSIGNMENT_URL}`);
     setAssignment(response.data);
@@ -44,16 +45,16 @@ function WorkingWithObjects() {
         })}
         value={assignment.title} />
       <h4>Retrieving Objects</h4>
-      <a href="http://localhost:4000/a5/assignment">
+      <a href={`${ASSIGNMENT_URL}`}>
         Get Assignment
       </a> <br />
-      <a href="http://localhost:4000/a5/module">
+      <a href={`${ASSIGNMENT_URL}/a5/module`}>
         Get Module
       </a>
       <h4>Retrieving Properties</h4>
-      <a href="http://localhost:4000/a5/assignment/title">
+      <a href={`${ASSIGNMENT_URL}/title`}>
         Get Title </a> <br />
-      <a href="http://localhost:4000/a5/module/name">
+      <a href={`${MODULE_URL}/name`}>
         Get Module Title
       </a>
     </div>
