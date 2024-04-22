@@ -10,7 +10,7 @@ import Assignments from "./Assignments";
 
 function Courses() {
     const { courseId } = useParams();
-    const COURSES_API = "http://localhost:4000/api/courses";
+    const COURSES_API = "http://localhost:4000/api/courses" || `${process.env.REACT_APP_BASE_API_URL}/api/courses`;
     const [course, setCourse] = useState<any>({ _id: "" });
     const findCourseById = async (courseId?: string) => {
         const response = await axios.get(
