@@ -6,8 +6,9 @@ function WorkingWithObjects() {
     description: "Create a NodeJS server with ExpressJS",
     due: "2021-10-10", completed: false, score: 0,
   });
-  const ASSIGNMENT_URL = "http://localhost:4000/a5/assignment" ||`${process.env.REACT_APP_BASE_API_URL}/a5/assignment`;
-  const MODULE_URL = "http://localhost:4000/a5/modules" ||`${process.env.REACT_APP_BASE_API_URL}/a5/modules`;
+  const API = process.env.REACT_APP_BASE_API_URL;
+  const ASSIGNMENT_URL = `${API}/a5/assignment`;
+  const MODULE_URL = `${API}/a5/modules`;
   const fetchAssignment = async () => {
     const response = await axios.get(`${ASSIGNMENT_URL}`);
     setAssignment(response.data);
